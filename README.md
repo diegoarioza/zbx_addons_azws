@@ -1,6 +1,6 @@
 # zbx_addons_azws
 
-Versão Atual 0.0.1a
+Versão Atual 0.0.2a
 
 Biblioteca de addons do zabbix feita em python
 
