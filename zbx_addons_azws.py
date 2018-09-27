@@ -5,8 +5,6 @@ import json
 import sys
 
 class Zbx_azws_addons(object):
-
-
     def __init__(self, url, login="Admin", password="zabbix"):
         self.headers = {'content-type': 'application/json'}
         self.url = url + '/api_jsonrpc.php'
@@ -47,6 +45,6 @@ class Zbx_azws_addons(object):
             print("Deu Merda - \"{}\"".format(req.json()['error']['data']))
 
 
-host1 = Zbx_azws_addons("https://zabbix.azws.com.br", "telegram", "telegram")
+host1 = Zbx_azws_addons("https://zabbix.azws.com.br", "teste_api", "teste_apiazws")
 
 host1.cadastrar_Host()
