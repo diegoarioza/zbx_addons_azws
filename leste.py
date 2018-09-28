@@ -26,7 +26,7 @@ busca_sessao = re.search(pattern, busca0.text)
 sessao = busca_sessao.group(0).split("\"")[2]
 cookie_session = str(req.cookies.values()[0])
 print("sessao: {}\nCookie_Session: {}\n\n".format(sessao, cookie_session))
-
+# print(busca0.text)
 
 
 ###### Acesso pagina 2
@@ -69,8 +69,9 @@ payload = {
             }
 
 
-busca1 = req.post('https://voxis.unimedlestefluminense.coop.br/saudi/relatorioNotasUpload.do?task=buscarTransacoes', data=payload, headers=headers, cookies={"JSESSIONID":JSESSIONID}, verify=False)
+busca1 = req.post('https://voxis.unimedlestefluminense.coop.br/saudi/relatorioNotasUpload.do?task=buscarTransacoes', data=payload, headers=headers, cookies={"JSESSIONID":cookie_session }, verify=False)
 
 print(busca1.text)
 # print(busca1.headers)
 #print(busca1.cookies.)
+print("Status Code: {}".format(busca1.status_code))
