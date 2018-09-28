@@ -5,7 +5,7 @@ import re
 ###### Login Pagina Inicial
 payload = {
     'login': 'administrador',
-    'senha': 'XXXXXX'
+    'senha': 's@udi_v307'
     }
 
 req = requests.Session()
@@ -69,7 +69,7 @@ payload = {
             }
 
 
-busca1 = req.post('https://voxis.unimedlestefluminense.coop.br/saudi/relatorioNotasUpload.do?task=buscarTransacoes', data=payload, headers=headers, cookies={"JSESSIONID":str(JSESSIONID)}, verify=False)
+busca1 = req.post('https://voxis.unimedlestefluminense.coop.br/saudi/relatorioNotasUpload.do?task=buscarTransacoes', data=payload, headers=headers, cookies={"JSESSIONID":JSESSIONID}, verify=False)
 
 print(busca1.text)
 # print(busca1.headers)
